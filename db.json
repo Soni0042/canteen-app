@@ -1,0 +1,92 @@
+{
+  "snacks": [
+    {
+      "id": "1",
+      "name": "Burger",
+      "price": 50,
+      "ordersCount": 4
+    },
+    {
+      "id": "2",
+      "name": "Pizza",
+      "price": 80,
+      "ordersCount": 4
+    },
+    {
+      "id": "3",
+      "name": "Sandwich",
+      "price": 40,
+      "ordersCount": 4
+    }
+  ],
+  "students": [
+    {
+      "id": "1",
+      "name": "Rahul",
+      "referralCode": "REF123",
+      "totalSpent": 80
+    },
+    {
+      "id": "2",
+      "name": "Piyush Soni",
+      "referralCode": "REF456",
+      "totalSpent": 240
+    },
+    {
+      "id": "3",
+      "name": "Rohan",
+      "referralCode": "REF789",
+      "totalSpent": 240
+    },
+    {
+      "name": "Rohit",
+      "referralCode": "REF2833",
+      "totalSpent": 0,
+      "id": "AQZxeDx9xsI"
+    },
+    {
+      "name": "Raj Soni",
+      "referralCode": "REF9201",
+      "totalSpent": 120,
+      "id": "94qLRdrI0vc"
+    }
+  ],
+  "orders": [
+    {
+      "snackId": "1",
+      "studentId": "2",
+      "quantity": 4,
+      "total": 200,
+      "id": "OzWLpDjP3i4"
+    },
+    {
+      "snackId": "2",
+      "studentId": "1",
+      "quantity": 1,
+      "total": 80,
+      "id": "81riMdU6X24"
+    },
+    {
+      "snackId": "2",
+      "studentId": "3",
+      "quantity": 3,
+      "total": 240,
+      "id": "p0IYGd1zXJQ"
+    },
+    {
+      "snackId": "3",
+      "studentId": "94qLRdrI0vc",
+      "quantity": 3,
+      "total": 120,
+      "id": "53gMIJxn0IM"
+    },
+    {
+      "snackId": "3",
+      "studentId": "2",
+      "quantity": 1,
+      "total": 40,
+      "id": "Z95xqQ3KLKo"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
