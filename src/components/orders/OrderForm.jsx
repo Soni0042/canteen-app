@@ -24,15 +24,15 @@ const OrderForm = ({ snack, students, onClose }) => {
         total: snack.price * quantity,
       };
 
-      // 1️⃣ Create Order
+      // Create Order
       await createOrder(orderData);
 
-      // 2️⃣ Update Snack
+      // Update Snack
       await updateSnack(snack.id, {
         ordersCount: snack.ordersCount + quantity,
       });
 
-      // 3️⃣ Update Student
+      // Update Student
       const selectedStudent = students.find(
   (s) => String(s.id) === String(data.studentId)
        );
@@ -43,7 +43,7 @@ const OrderForm = ({ snack, students, onClose }) => {
         });
       }
 
-      // ✅ Refresh UI (VERY IMPORTANT 🔥)
+  
       queryClient.invalidateQueries(["snacks"]);
       queryClient.invalidateQueries(["students"]);
 

@@ -17,7 +17,7 @@ const StudentsPage = () => {
   if (isError) {
     return (
       <p className="text-center mt-10 text-red-500">
-        Failed to load students ❌
+        Failed to load students 
       </p>
     );
   }
