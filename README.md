@@ -1,16 +1,85 @@
-# React + Vite
+#  School Canteen App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a React-based frontend application built as part of a screening task. It simulates a simple canteen ordering system where students can view snacks, place orders, and track their spending.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## ⚙️ Setup Instructions
 
-## React Compiler
+Follow these steps to run the project locally:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 1. Install dependencies
 
-## Expanding the ESLint configuration
+```bash
+npm install
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 2. Start the frontend
+
+```bash
+npm run dev
+```
+
+### 3. Start the mock backend (JSON Server)
+
+```bash
+json-server --watch db.json --port 3000
+```
+
+Make sure both frontend and backend are running at the same time.
+
+---
+
+##  Libraries Used
+
+* **React (Vite)** – for building the UI
+* **React Router DOM** – for navigation between pages
+* **React Query** – for handling API data, caching, and updates
+* **React Hook Form** – for form handling and validation
+* **Axios** – for making API requests
+* **Tailwind CSS** – for styling and responsive design
+* **JSON Server** – for creating a mock backend
+
+---
+
+## Mock Data Approach
+
+Since this project does not use a real backend, I used **JSON Server** to simulate API endpoints.
+
+* A `db.json` file is used as the database
+* It contains:
+
+  * `snacks`
+  * `students`
+  * `orders`
+
+The frontend interacts with this mock backend using REST APIs such as:
+
+* `GET /snacks`
+* `GET /students`
+* `POST /students`
+* `POST /orders`
+* `PATCH /students/:id`
+* `PATCH /snacks/:id`
+
+When an order is placed:
+
+* A new order is added to the database
+* The selected student’s `totalSpent` is updated
+* The snack’s `ordersCount` is incremented
+
+This approach helps simulate a real-world backend without needing a full server setup.
+
+---
+
+## Summary
+
+This project demonstrates:
+
+* Clean component structure
+* Proper API integration
+* State management using React Query
+* Form handling and validation
+* A simple but functional user experience
+
+---
